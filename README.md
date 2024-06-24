@@ -45,3 +45,9 @@ cd aws-federated-headless-login/
 go build -buildvcs=false
 ```
 
+# Run it every time you log in to the shell
+Edit the shells .bashrc file and add ./init.sh at the end.
+note that as ~/ is persistent storage things like the git clone will error as the folders will already exist.
+
+# Things to do
+- Make init.sh more robust with prompts instead of just being mindless
