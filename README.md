@@ -26,7 +26,9 @@ Done. Your shell is now configured with the things you want.
 ## cloudshell_command.txt
 This file contains the command you run on your cloudshell.
 an example is:
-
+```
+sudo aws s3 cp s3://setup-cloudshell-y4uqexrt/init.sh ~/init.sh && sudo chmod +x ~/init.sh && sudo ~/init.sh
+```
 # init.sh
 
 Currently the init.sh will install goland and clone the useful repositories for managing cloud estates at scale. this is a WIP.
