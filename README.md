@@ -45,9 +45,15 @@ cd aws-federated-headless-login/
 go build -buildvcs=false
 ```
 
-# Run it every time you log in to the shell
-Edit the shells .bashrc file and add ./init.sh at the end.
+## Things to do
+- Make init.sh more robust with prompts instead of just being mindless
+
+# FAQ
+
+Q: How do I make this run it every time I log in to the shell
+A: Edit the shells .bashrc file and add **./init.sh** at the end.
 note that as ~/ is persistent storage things like the git clone will error as the folders will already exist.
 
-# Things to do
-- Make init.sh more robust with prompts instead of just being mindless
+Q: My CloudShell does not seem to have my init.sh in it?
+A: Did you change region? Each region will make Cloudshell have a new persistent storage for ~/ so you need to run the cloudshell_command.txt command in each region you want to use cloudshell. Painful I know, which is why you should look into the centralised approach instead.
+
