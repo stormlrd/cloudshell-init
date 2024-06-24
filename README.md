@@ -31,7 +31,7 @@ sudo aws s3 cp s3://setup-cloudshell-y4uqexrt/init.sh ~/init.sh && sudo chmod +x
 ```
 # init.sh
 
-Currently the init.sh will install goland and clone the useful repositories for managing cloud estates at scale. this is a WIP.
+Currently the init.sh will install golang and clone the useful repositories for managing cloud estates at scale. this is a WIP.
 ```
 # Install Golang
 sudo yum install golang
@@ -59,3 +59,10 @@ Q: My CloudShell does not seem to have my init.sh in it?
 
 A: Did you change region? Each region will make Cloudshell have a new persistent storage for ~/ so you need to run the cloudshell_command.txt command in each region you want to use cloudshell. Painful I know, which is why you should look into the centralised approach instead.
 
+Q: Do I need to create this bucket per region in the same account?
+
+A: No.
+
+Q: Should I create a bucket per account?
+
+A: This solution will over write the  local files. it is not built for multi-account deployments. The idea is that one cloudshell should be able to be used to manage all your accounts and all regions anyway so look into the federated identity stuff I put into the init.sh and the world will become your oyster...
